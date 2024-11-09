@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #4e91c7, #0e3459);
+  color: #fff;
+}
+
+.app-container {
+  text-align: center;
+}
+
+.weather-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.city {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.temperature {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-item {
+  font-size: 16px;
+  text-align: center;
+}
+
+.fetch-weather {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ffffff30;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.fetch-weather:hover {
+  background-color: #ffffff50;
+}

@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8); /* Full black background */
+  color: #fff;
+  position: relative;
+  overflow: hidden; /* Hide overflow caused by the cloud */
+}
+
+body {
+  padding: 0;
+}
+
+.cloud-container {
+  position: absolute;
+  pointer-events: none; /* Prevent cloud from interfering with mouse events */
+  z-index: 0; /* Place it behind the content */
+}
+
+#cloud {
+  width: 200px; /* Set the size of the cloud image */
+  position: absolute;
+  pointer-events: auto;
+  transition: transform 0.5s ease;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1; /* Make sure weather box is above cloud */
+}
+
+.weather-box {
+  background: rgba(0, 0, 0, 0.85); /* Translucent black background */
+  padding: 40px 50px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+.weather-box h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+input, button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 15px;
+}
+
+input::placeholder {
+  color: #ccc;
+  font-style: italic;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+#weather-result h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+#weather-result p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #ccc;
+}
+
+#weather-result {
+  margin-top: 20px;
+}
+
+#weather-result p, #weather-result h2 {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 500px) {
+  .weather-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+  }
+
+  input, button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
